@@ -29,7 +29,7 @@ twitter_username: n/a
 github_username:  jlance999
 
 # Build settings
-theme: jekyll-theme-midnight
+theme: minima
 plugins:
   - jekyll-feed
 
