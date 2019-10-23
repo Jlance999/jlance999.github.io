@@ -4,6 +4,9 @@ title:  "Welcome"
 date:   2019-10-22 23:22:42 -0400
 categories: life
 ---
-Hello, my name is jeremy and this website is intended as an ongoing personal development porfolia and dev diary for various projects. I will doducment all milestones and projects here, my goal being to grow as a software developer and create a robust portfolia for future resumes.
+Hello, my name is Jeremy, I am a Computer Science major.
+
+This website is intended as an ongoing personal development porfolia and dev diary for various projects. 
+I will doducment all milestones and projects here, my goal being to grow as a software developer and create a robust portfolia for future resumes.
 
 
