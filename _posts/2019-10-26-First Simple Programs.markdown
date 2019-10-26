@@ -22,6 +22,10 @@ int main(void) {
 }
 ```
 
+Example Output:
+![image](/assets/images/Arithmetic Functions.png)
+
+
 Nearly everything is commented here, worth noting is that anything following // is a comment, and will not be ran as instructions.
 
 Other escape sequences include:
