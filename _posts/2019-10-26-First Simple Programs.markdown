@@ -11,7 +11,7 @@ II: Introduction to C Programming
 ##Hello World
 We start with the obvious first program anyone makes, simply displaying "Hello World" to the screen.
 
-'''c
+```c
 #include <stdio.h> // Include standard input and output library functions (such as printf).
 
 int main(void) {
@@ -19,7 +19,7 @@ int main(void) {
   printf("Hello World\n"); // What will be displayed, f stands for "formatted", \n begins a new line after World
   return 0; // Every line must end with a ;, functions are defined between a set of braces. 0 is the value returned by this function as we do not need it to return a value.
 }
-'''
+```
 
 Nearly everything is commented here, worth noting is that anything following // is a comment, and will not be ran as instructions.
 
