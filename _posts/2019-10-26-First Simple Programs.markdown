@@ -5,10 +5,11 @@ date:   2019-10-26 11:21:42 -0400
 categories: C
 ---
 
-This post will contain my takeaways from section 2 of the book, including a few simple commented programs. All code snipets seen within this post are available on both my repl.it and my github, usernames for both are jlance999.
+This post will contain my takeaways from section 2 of the book, including a few simple commented programs. All code snipets seen within this post are available [here] (https://github.com/Jlance999/C-How-to-Program "C-How-to-Program Repo")
 
-II: Introduction to C Programming
-##Hello World
+# II: Introduction to C Programming
+
+## Hello World
 We start with the obvious first program anyone makes, simply displaying "Hello World" to the screen.
 
 ```c
