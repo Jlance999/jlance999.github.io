@@ -23,7 +23,7 @@ int main(void) {
 ```
 
 Example Output:
-![image](/assets/images/Arithmetic Functions.png)
+![image](/assets/images/Hello World.png)
 
 
 Nearly everything is commented here, worth noting is that anything following // is a comment, and will not be ran as instructions.
