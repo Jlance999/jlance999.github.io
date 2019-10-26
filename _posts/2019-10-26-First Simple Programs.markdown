@@ -65,7 +65,7 @@ printf("Quotient: %d.\n", quotient);
 remainder = int1 % int2;
 printf("Remainder: %d.\n", remainder);
 
-return 0;							// End program (non commented functions are self explanitory.)
+return 0;							// End program (non commented functions are self explanatory.)
 }
 ```
 
