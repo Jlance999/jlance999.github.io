@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Beginning with C: Introduction to Computers, the Internet, and the Web"
+title:  "C: First Simple Programs"
 date:   2019-10-26 11:21:42 -0400
 categories: C
 ---
