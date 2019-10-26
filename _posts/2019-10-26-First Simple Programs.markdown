@@ -5,7 +5,7 @@ date:   2019-10-26 11:21:42 -0400
 categories: C
 ---
 
-This post will contain my takeaways from section 2 of the book, including a few simple commented programs. All code snipets seen within this post are available [here] (https://github.com/Jlance999/C-How-to-Program "C-How-to-Program Repo")
+This post will contain my takeaways from section 2 of the book, including a few simple commented programs. All code snipets seen within this post are available [here](https://github.com/Jlance999/C-How-to-Program "C-How-to-Program Repo")
 
 # II: Introduction to C Programming
 
@@ -17,10 +17,17 @@ We start with the obvious first program anyone makes, simply displaying "Hello W
 
 int main(void) {
   // Main function, every program must have one. Void means it receives no values.
-  printf("Hello World\n"); // What will be displayed, f stands for "formatted", \n begins a new line after World
+  printf("Hello World\n"); // What will be displayed, f stands for "formatted", \n an escape sequence which begins a new line after World
   return 0; // Every line must end with a ;, functions are defined between a set of braces. 0 is the value returned by this function as we do not need it to return a value.
 }
 ```
 
 Nearly everything is commented here, worth noting is that anything following // is a comment, and will not be ran as instructions.
+
+Other escape sequences include:
+* \t for a tab
+* \a for an alert (will produce a sound or visable alert)
+* \" for a double quote
+
+
 
