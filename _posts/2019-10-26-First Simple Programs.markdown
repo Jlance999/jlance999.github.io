@@ -69,6 +69,8 @@ return 0;							// End program (non commented functions are self explanatory.)
 }
 ```
 
+Example Output:
+![image](/assets/images/Arithmetic Functions.png)
 The only other things covered in this chapter are the use of () to denite which arithmetic should be done first, for instance when adding multiple variables then dividing them by one value, and the use of equality operands / if statements,
  we will use them shortly.
 
