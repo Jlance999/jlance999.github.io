@@ -30,7 +30,7 @@ Other escape sequences include:
 * \" for a double quote
 * \\ to place a single \
 
-#Arithmatic Functions
+## Arithmatic Functions
 Next we go over basic arithmetic operators, as it was an exercise in the end of chapter.
 
 ```c
