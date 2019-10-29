@@ -165,10 +165,7 @@ integers from the keyboard, then prints the sum, the average, the product, the s
 #include <stdio.h>
 
 int main(void) {
-  /*
-  Write a program that inputs three different
-integers from the keyboard, then prints the sum, the average, the product, the smallest and the largest of these numbers. Use only the single-selection form of the if statement you learned in this chapter
-*/
+
   int int1;         //Initializing variables for calculations.
   int int2;
   int int3;
