@@ -229,5 +229,39 @@ Example Output:
 
 
 
+## Body Mass Index Calculator
+Create a BMI calculator application that reads the user’s weight in pounds and height in inches
+(or, if you prefer, the user’s weight in kilograms and height in meters), then calculates and displays
+the user’s body mass index.
+
+```c
+#include <stdio.h>  // Included to allow for printf/scanf
+
+int main(void) {
+  float weight;     // Initializing variables
+  float height;
+  float bmi;
+
+  printf("Please enter weight in pounds: ");    // Prompting user for input
+  scanf("%f", &weight);                         // Storing user input to variable
+
+  printf("Please enter height in inches: ");
+  scanf("%f", &height);
+
+  bmi = (weight*703) / (height * height);       // Performing calculations using user input 
+
+// Formatted BMI Value chart for comparison with calculation.
+  printf("\n\nBMI Values\nUnderweight:\tless than 18.5\nNormal:\t\t\tBetween 18.5 and 24.9\nOverweight:\t\tbetween 25 and 29.9\nObese:\t\t\t30 or greater.\n\n");
+// Displaying calculated BMI
+  printf("Your bmi is %.2f", bmi);
+  return 0; // End
+}
+```
+Example Output:
+![image](/assets/images/Body Mass Index Calculator.png)
+
+
+
+
 ## Summary
 Coming Soon.
