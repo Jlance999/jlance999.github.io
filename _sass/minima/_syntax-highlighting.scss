@@ -2,7 +2,7 @@
  * Syntax highlighting styles
  */
  .highlight {
-    background: rgb(84, 207, 255);
+    background: rgb(0, 0, 0);
     @extend %vertical-rhythm;
   
     .highlighter-rouge & {
@@ -14,7 +14,7 @@ code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: rgb(67, 202, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 code {
