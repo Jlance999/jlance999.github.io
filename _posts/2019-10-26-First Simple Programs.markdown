@@ -264,4 +264,4 @@ Example Output:
 
 
 ## Summary
-Coming Soon...
+Coming Soon.
