@@ -258,7 +258,7 @@ int main(void) {
 }
 ```
 Example Output:
-![image](/assets/images/Body Mass Index Calculator.png)
+
 
 
 
