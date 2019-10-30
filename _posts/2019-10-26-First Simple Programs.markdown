@@ -25,7 +25,7 @@ int main(void) {
 Example Output:
 ![image](/assets/images/Hello World.png)
 
-
+Summary:
 Nearly everything is commented here, worth noting is that anything following // is a comment, and will not be ran as instructions.
 
 Other escape sequences include:
@@ -79,12 +79,12 @@ Example Output:
 
 
 
-The only other things covered in this chapter are the use of () to denite which arithmetic should be done first, for instance when adding multiple variables then dividing them by one value, and the use of equality operands / if statements,
- we will use them shortly.
+Summary:
+* Arithmatic functions work similar to how they are used in a calculator. 
+* Values can be assigned to variables as integers using scanf
+* Calculations can be made with variables and assigned to new variables for display/use
+* It often makes sense to plan out variables and name them according to their intended use within a function.
 
- There are a few other exercises that seem interesting for this chapter, the following is their requirements and my take on them.
-
- 
 ## Printing Values with printf
 Write a program that prints the numbers 1 to 4 on the same
 line. Write the program using the following methods.
@@ -112,11 +112,14 @@ int main(void) {
   return 0;
 }
 ```
+
 Example Output:
 ![image](/assets/images/Printing Values with printf.png)
 
 
 
+Summary:
+In this program we mainly expirimented with different ways to format the printf function and displaying values stored within variables in different ways.
 
 ## Comparing Integers
 Write a program that asks the user to enter two integers, obtains the
@@ -156,6 +159,11 @@ Example Output:
 
 
 
+
+Summary:
+This program helped cement the usecases for the if opperator, especially with the us of operators comparing values.
+If() basically tests for what is within its brackets, then runs the code followig if its criteria are met. It is a good way to segment code into multiple pathways.
+Uses for this ability could be something like a text based rpg, with dialogue options resulting in different behavior, seperating a calculator into metric or imperial units (for instance in the BMI calculator made later in this post).
 
 ## Arithmetic, Largest Value and Smallest Value
 Write a program that inputs three different
@@ -229,6 +237,10 @@ Example Output:
 
 
 
+Summary:
+We didn't learn too many new concepts here, but it did concrete the idea of using () to determine what arithmetic functions should calculate first. 
+We can also nest parenthesis to further specify order of operations as needed.
+
 ## Body Mass Index Calculator
 Create a BMI calculator application that reads the user’s weight in pounds and height in inches
 (or, if you prefer, the user’s weight in kilograms and height in meters), then calculates and displays
@@ -264,5 +276,9 @@ Example Output:
 
 
 
-## Summary
-Coming Soon.
+Summary:
+I chose to do this exercise as it seemed actually usable in the real world, and offered a place to test different variable types. Though we did not learn about them in this chapter I decided to store my variables as floats this time, and used the .02 in my display to limit output to 2 decimal places. It just made sense for BMI to be a more exacting calculation. 
+
+We also finally used the tab command we learned earlier to space everything out and create a legible table. 
+
+This was a great refresher for me, and with these exercises behind me i'm excited to move into Chapter 3, expect a (work in progress) post for that chapter to be posted within the next week.
