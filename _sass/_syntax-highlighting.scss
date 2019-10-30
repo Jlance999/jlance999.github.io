@@ -8,6 +8,18 @@
     .highlighter-rouge & {
       background: rgb(74, 139, 165);
     }
+
+    pre,
+code {
+    font-size: 15px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: $background;
+}
+
+code {
+    padding: 1px 5px;
+}
   
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
