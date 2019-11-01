@@ -161,7 +161,7 @@ Example Output:
 
 
 Summary:
-This program helped cement the usecases for the if opperator, especially with the us of operators comparing values.
+This program helped cement the usecases for the if opperator, especially with the use of operators comparing values.
 If() basically tests for what is within its brackets, then runs the code followig if its criteria are met. It is a good way to segment code into multiple pathways.
 Uses for this ability could be something like a text based rpg, with dialogue options resulting in different behavior, seperating a calculator into metric or imperial units (for instance in the BMI calculator made later in this post).
 
