@@ -418,3 +418,12 @@ Example Output:
 Not much garnered from this program to be honest, it was very simple I just hadn't previously used the remainder
 operator.
 
+## Palindrome Tester
+
+## Printing the Decimal Equivalent of a Binary Number
+
+## Factorial
+
+## Target-Heart-Rate Calculator
+
+## Enforcing Privacy with Cryptography
