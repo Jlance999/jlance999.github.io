@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   A documented journey of my development as a CS Major and budding software developer,
   including my resume, project list, contact information and posts commenting on the journey as I go.
 baseurl: /
-url: http://jlance999.github.io 
+url: http://jeremyperkins.dev 
 
 github_username: jlance999
 
