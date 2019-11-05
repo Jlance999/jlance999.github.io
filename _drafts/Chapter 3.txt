@@ -419,11 +419,91 @@ Not much garnered from this program to be honest, it was very simple I just hadn
 operator.
 
 ## Palindrome Tester
+A palindrome is a number or a text phrase that reads the same backward as forward. For example, each of the following five-digit integers is a palindrome: 12321,
+55555, 45554 and 11611. Write a program that reads in a five-digit integer and determines whether
+or not it’s a palindrome. [Hint: Use the division and remainder operators to separate the number
+into its individual digits.]
+
+```c
+#include <stdio.h>
+ 
+int main()
+{
+   int posPalindrome;
+   int revPosPalindrome = 0;
+   int i;
+ 
+   printf("Enter an integer to check if it is palindrome or not\n");
+   scanf("%d", &posPalindrome);
+ 
+   i = posPalindrome;
+ 
+   while (i != 0)
+   {
+      revPosPalindrome = revPosPalindrome * 10;
+      revPosPalindrome = revPosPalindrome + i%10;
+      printf("%d\n", revPosPalindrome);
+      i = i/10;
+   }
+ 
+   if (posPalindrome == revPosPalindrome)
+      printf("%d is a palindrome number.\n", posPalindrome);
+   else
+      printf("%d isn't a palindrome number.\n", posPalindrome);
+ 
+   return 0;
+}
+```
 
 ## Printing the Decimal Equivalent of a Binary Number
+Input an integer (5 digits or fewer)
+containing only 0s and 1s (i.e., a “binary” integer) and print its decimal equivalent. [Hint: Use the
+remainder and division operators to pick off the “binary” number’s digits one at a time from right
+to left. Just as in the decimal number system, in which the rightmost digit has a positional value of
+1, and the next digit left has a positional value of 10, then 100, then 1000, and so on, in the binary
+number system the rightmost digit has a positional value of 1, the next digit left has a positional
+value of 2, then 4, then 8, and so on. Thus the decimal number 234 can be interpreted as 4 * 1 + 3
+* 10 + 2 * 100. The decimal equivalent of binary 1101 is 1 * 1 + 0 * 2 + 1 * 4 + 1 * 8 or 1 + 0 + 4
++ 8 or 13.]
 
 ## Factorial
+n! = 1 (for n = 0).
+For example, 5! = 5 · 4 · 3 · 2 · 1, which is 120.
+a) Write a program that reads a nonnegative integer and computes and prints its factorial
+
+```c
+
+```
 
 ## Target-Heart-Rate Calculator
+While exercising, you can use a heart-rate monitor to see
+that your heart rate stays within a safe range suggested by your trainers and doctors. According to
+the American Heart Association (AHA), the formula for calculating your maximum heart rate in
+beats per minute is 220 minus your age in years. Your target heart rate is a range that’s 50–85% of
+your maximum heart rate. [Note: These formulas are estimates provided by the AHA. Maximum
+and target heart rates may vary based on the health, fitness and gender of the individual. Always consult a physician or qualified health care professional before beginning or modifying an exercise program.]
+Create a program that reads the user’s birthday and the current day (each consisting of the month,
+day and year). Your program should calculate and display the person’s age (in years), the person’s
+maximum heart rate and the person’s target-heart-rate range.
+
+```c
+
+```
 
 ## Enforcing Privacy with Cryptography
+The explosive growth of Internet communications
+and data storage on Internet-connected computers has greatly increased privacy concerns. The field
+of cryptography is concerned with coding data to make it difficult (and hopefully—with the most
+advanced schemes—impossible) for unauthorized users to read. In this exercise you’ll investigate a
+simple scheme for encrypting and decrypting data. A company that wants to send data over the Internet has asked you to write a program that will encrypt it so that it may be transmitted more securely. All the data is transmitted as four-digit integers. Your application should read a four-digit
+integer entered by the user and encrypt it as follows: Replace each digit with the result of adding 7
+to the digit and getting the remainder after dividing the new value by 10. Then swap the first digit
+with the third, and swap the second digit with the fourth. Then print the encrypted integer. Write
+a separate application that inputs an encrypted four-digit integer and decrypts it (by reversing the
+encryption scheme) to form the original number. [Optional reading project: Research “public key
+cryptography” in general and the PGP (Pretty Good Privacy) specific public key scheme. You may
+also want to investigate the RSA scheme, which is widely used in industrial-strength applications.]
+
+```c
+
+```
