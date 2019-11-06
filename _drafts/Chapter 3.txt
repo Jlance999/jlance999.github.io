@@ -428,32 +428,61 @@ into its individual digits.]
 #include <stdio.h>
  
 int main()
+#include <stdio.h>
+ 
+int main()
 {
-   int posPalindrome;
-   int revPosPalindrome = 0;
-   int i;
+   int posPalindrome;                   // Initializing variable to hold user input
+   int revPosPalindrome = 0;            // Initializing variable to hold reverse of input
+   int i;                               // Initializing holding variable
  
-   printf("Enter an integer to check if it is palindrome or not\n");
+    // Explaining program function to user
+   printf("This program will take a 5 digit integer input and determine if it is a Palindrome.\n\n");
+ 
+    // Promtping user for input
+   printf("Please enter a 5 digit integer: ");
+    // Storing user input
    scanf("%d", &posPalindrome);
- 
+    // Holding user input in temporary variable for use in calculations
    i = posPalindrome;
- 
+  
+    // Could also just be when it runs 5 times, but this allows longer integer inputs.
    while (i != 0)
    {
+     // Adds a 0 to the end of current stored value, matters later
       revPosPalindrome = revPosPalindrome * 10;
+
+     // Adds the remainder of i divided by 10, this replaces the 0 from the last line
       revPosPalindrome = revPosPalindrome + i%10;
-      printf("%d\n", revPosPalindrome);
+ 
+     // Divides held value by 10, this drops the last digit, which is now stored in revPal
       i = i/10;
    }
  
+    /*After the while function has completed, the revPosPalindrome variable will hold the
+      user input value backwards to forwards. At this point we only need to compare them to
+      determine if the value is a Palindrome.
+    */
    if (posPalindrome == revPosPalindrome)
       printf("%d is a palindrome number.\n", posPalindrome);
    else
       printf("%d isn't a palindrome number.\n", posPalindrome);
  
-   return 0;
+   return 0;  // End
 }
 ```
+
+Example Output:
+![image](/assets/images/Palindrome Tester.png)
+
+
+
+Honestly I wasn't able to figure this one out on my own. I ended up finding the solution online elsewhere 
+and using a printf command within the loop to understand what was happening. By printing between each 
+line within the while name I was able to determine how the loop functioned, in this case I've explained it
+all within the commented code. The wheel does not always need to be reinvented. Sometimes you are better off
+saving your time, learning how it was done elsewhere and implementing it so you have the understanding to do it
+in the future.
 
 ## Printing the Decimal Equivalent of a Binary Number
 Input an integer (5 digits or fewer)
@@ -466,14 +495,99 @@ value of 2, then 4, then 8, and so on. Thus the decimal number 234 can be interp
 * 10 + 2 * 100. The decimal equivalent of binary 1101 is 1 * 1 + 0 * 2 + 1 * 4 + 1 * 8 or 1 + 0 + 4
 + 8 or 13.]
 
-## Factorial
-n! = 1 (for n = 0).
-For example, 5! = 5 · 4 · 3 · 2 · 1, which is 120.
-a) Write a program that reads a nonnegative integer and computes and prints its factorial
 
 ```c
+#include <stdio.h>
 
+int main(void) {
+
+int binaryIn;           // Processing global variables
+int processing;         // Holds rightmost binary digit to be processed
+int digitalOut=0;       // Initializing digital value to 0, errors were produced otherwise
+int holding;            // not needed. could use binaryIn instead for the entire program
+
+printf("This program takes a user input binary number and returns its decimal equivalent.\n\n");
+
+printf("Please enter binary number for conversion: ");
+scanf("%d", &binaryIn);
+
+holding = binaryIn; // Holds initial binary value, redundant in this case, not needed
+int digitalProc=0;  // Initializes variable that will process binary value to digital
+int binMult = 1;
+
+while (holding !=0) {
+  processing = holding%10;  // Puts rightmost value of holding into a variable for use
+
+  digitalProc= processing*binMult;  // Multiplies rightmost variable to get digital value
+
+  digitalOut = digitalOut + digitalProc;  // Adds 1s, 2s, 4s, 8s, etc binary inputs
+
+  holding = holding/10; // Removes rightmost value from further processing
+
+  binMult = binMult*2;  // Multiplies itself by 2, because binary goes up in power of 2
+}
+
+printf("Decimal value is %d\n", digitalOut);  // Output
+
+  return 0; // End
+}
 ```
+
+Example Output:
+![image](/assets/images/Printing the Decimal Equivalent of a Binary Number.png)
+
+
+I wanted to leave this as an example of how to understand what is going on during your loops. This 
+is the same process I used in the previous problem to understand how it was done, this time I did it
+to debug my own code and came up with the solution to this problem on my own.
+
+Example Output:
+![image](/assets/images/Printing the Decimal Equivalent of a Binary Number1.png)
+
+
+
+
+## Factorial
+The factorial of a nonnegative integer n is written n! (pronounced “n factorial”)
+and is defined as follows:
+n! = n · (n - 1) · (n - 2) · … · 1 (for values of n greater than or equal to 1)
+and
+n! = 1 (for n = 0).
+For example, 5! = 5 · 4 · 3 · 2 · 1, which is 120.
+a) Write a program that reads a nonnegative integer and computes and prints its factorial.
+
+```c
+#include <stdio.h>
+
+int main(void) {
+  unsigned int factorial; // Global variable to hold user input
+  int totalIn = 0;        // Counter variable
+  int totalOut;       // Initializing variable to hold final answer
+
+    // Explaining program function to user
+  printf("This program will take a single digit integer input and output the factorial.\n");
+
+    // Prompting user for input
+  printf("Please enter integer: ");
+  scanf("%d", &factorial);     // Storing user input to variable
+  totalIn = factorial -1;      // Initializing counter variable value based on input
+  totalOut = factorial;        // Holding user input for calculation, not needed
+
+  while (totalIn > 0) {               // Loops until counter hits 0
+    totalOut = totalOut * totalIn;    // Multiplies user input by counter current value
+    totalIn--;                        // Reduces counter value by 1 every loop
+  }
+  printf("\nThe factorial is %d\n", totalOut);  // Output
+
+  return 0;   // End
+}
+```
+
+Example Output:
+![image](/assets/images/Factorial.png)
+
+
+
 
 ## Target-Heart-Rate Calculator
 While exercising, you can use a heart-rate monitor to see
@@ -487,8 +601,80 @@ day and year). Your program should calculate and display the person’s age (in 
 maximum heart rate and the person’s target-heart-rate range.
 
 ```c
+#include <stdio.h>
 
+int main(void) {
+    // Variables to hold birthdate values
+  int birthMonth;
+  int birthDay;
+  int birthYear;
+    // Variables to hold current date values
+  int curMonth;
+  int curDay;
+  int curYear;
+
+    // Explains program functionality to user
+  printf("This program will take your birth date and the current date and output your age, maximum heart rate, and target heart rate.");
+
+    // Typical prompt / storage
+  printf("Please enter your birthday month MM: ");
+  scanf("%d", &birthMonth);
+
+  printf("Please enter your birthday day DD: ");
+  scanf("%d", &birthDay);
+
+    printf("Please enter your birthday year YYYY: ");
+  scanf("%d", &birthYear);
+
+  printf("Please enter the current month MM: ");
+  scanf("%d", &curMonth);
+
+  printf("Please enter the current day DD: ");
+  scanf("%d", &curDay);
+
+  printf("Please enter the current year YYYY: ");
+  scanf("%d", &curYear);
+
+  int age = curYear - birthYear;                  // Calculates age, if statements do rest
+  int maxHeartRate = 220-age;                     // Calculates heartrate based on age
+  int lowTarHeartRate = maxHeartRate*.5;          // Calculates lower end target heart rate
+  int highTarHeartRate = maxHeartRate*.85;        // Calculates higher end target heart rate
+
+   // If current month is after birth month, we know the age, and will print.
+  if (curMonth>birthMonth){
+  printf("\nYou are %d\nYourYour Maximum Heart Rate is %d\nYour Target Heart Rate is %d-%d\n", age,maxHeartRate, lowTarHeartRate, highTarHeartRate);
+  }
+    // If the current month is the same as the birth month, we need further checks
+  else if (curMonth == birthMonth) {
+    if (curDay > birthDay || curDay == birthDay) {
+      printf("\nYou are %d\nYour Maximum Heart Rate is %d\nYour Target Heart Rate is %d-%d\n", age, maxHeartRate, lowTarHeartRate, highTarHeartRate);
+    }
+
+    // If the current day is within the same month but before the birth day, age adjust
+    else {
+      age = age-1;              // Refactoring age
+      maxHeartRate = 220-age;   // Refactoring maximum heart rate with new age value
+
+      printf("\nYou are %d\nYour Maximum Heart Rate is %d\nYour Target Heart Rate is %d-%d\n", age, maxHeartRate, lowTarHeartRate, highTarHeartRate);
+    }
+  }
+    // If the current month is before the birth month, we know the age value needs adjustment
+  else {
+    age = age-1;                // Refactoring age
+    maxHeartRate = 220-age;     // Refactoring maximum heart rate with new age value
+
+    printf("\nYou are %d\nYour Maximum Heart Rate is %d\nYour Target Heart Rate is %d-%d\n", age, maxHeartRate, lowTarHeartRate, highTarHeartRate);
+  }
+
+  return 0;   // End
+}
 ```
+
+Example Output:
+![image](/assets/images/Target-Heart-Rate.png)
+
+
+
 
 ## Enforcing Privacy with Cryptography
 The explosive growth of Internet communications
