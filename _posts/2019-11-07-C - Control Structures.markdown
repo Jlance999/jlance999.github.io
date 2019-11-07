@@ -220,7 +220,7 @@ int main(void) {
 ```
 
 Example Output:
-![image](/assets/images/Finding the Largest Number.png)
+![image](/assets/images/Find the Largest Number.png)
 
 
 
@@ -280,7 +280,7 @@ int main(void) {
 ```
 
 Example Output:
-![image](/assets/images/Finding the Two Largest Numbers.png)
+![image](/assets/images/Find the Two Largest Numbers.png)
 
 
 
@@ -413,7 +413,7 @@ int main(void) {
 ```
 
 Example Output:
-![image](/assets/images/How fast is Your Computer.png)
+![image](/assets/images/How Fast is Your Computer.png)
 
 Not much garnered from this program to be honest, it was very simple I just hadn't previously used the remainder
 operator.
@@ -671,7 +671,7 @@ int main(void) {
 ```
 
 Example Output:
-![image](/assets/images/Target-Heart-Rate.png)
+![image](/assets/images/Target-Heart-Rate Calculator.png)
 
 
 
