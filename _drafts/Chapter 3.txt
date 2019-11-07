@@ -691,5 +691,88 @@ cryptography” in general and the PGP (Pretty Good Privacy) specific public key
 also want to investigate the RSA scheme, which is widely used in industrial-strength applications.]
 
 ```c
+#include <stdio.h>
 
+  // Work in progress, I have not figured out how to deal with 0 values in last step
+int main(void) {
+
+  int unencrypted;
+  int firstArith;
+  int revEncrypted = 0;
+  int encrypted = 0;
+  int fullEncrypted;
+
+    // Explains program function to user
+  printf("This program will read a 4 digit integer, and encrypt it to be de-encrypted by its partner program.\n");
+
+  printf("Please enter a 4 digit integer: ");     // Prompts user for input
+  scanf("%d", &unencrypted);                      // Stores input for modification
+
+  while (unencrypted != 0) {
+    
+      // Uses requested arithmetic to hide original values
+    firstArith = unencrypted % 10;
+    firstArith = firstArith + 7;
+    firstArith = firstArith % 10;
+
+    revEncrypted = revEncrypted * 10;
+    revEncrypted = revEncrypted + firstArith;
+    printf("revEncrypted is %d\n", revEncrypted);
+
+    unencrypted = unencrypted / 10;
+    printf("Unencrypted is %d\n", unencrypted);
+  }
+  
+    // Un-reverses previously encrypted integer
+  while (revEncrypted != 0) {
+
+    encrypted = encrypted * 10;
+    encrypted = encrypted + (revEncrypted % 10);
+    printf("Encrypted is %d\n", encrypted);
+
+    revEncrypted = revEncrypted / 10;
+    printf("revEncrypted is %d\n", revEncrypted);
+  }
+    // Initializing holding value for modification
+  int holding = encrypted;
+  holding = holding / 10;
+  holding = holding % 10;
+
+    // Swaps 3rd value to the front of fullEncrypted.
+  fullEncrypted = holding;
+  fullEncrypted = fullEncrypted * 10;
+  printf("fullEncrypted is %d\n", fullEncrypted);
+
+    // Initializing holding value for modification
+  holding = encrypted;
+  holding = holding % 10;
+
+    // Swaps 4th value to the second slot of integer
+  fullEncrypted = fullEncrypted + holding;
+  fullEncrypted = fullEncrypted * 10;
+  printf("fullEncrypted is %d\n", fullEncrypted);
+
+    // Initializing holding value for modification
+  holding = encrypted;
+  holding = holding / 1000;
+  holding = holding % 10;
+
+    // Swaps 1st value to the 3rd slot of integer
+  fullEncrypted = fullEncrypted + holding;
+  fullEncrypted = fullEncrypted * 10;
+  printf("fullEncrypted is %d\n", fullEncrypted);
+
+    // Initializing holding value for modification
+  holding = encrypted;
+  holding = holding / 100;
+  holding = holding % 10;
+
+    // Swaps 2nd value to the 4th slot of integer
+  fullEncrypted = fullEncrypted + holding;
+  printf("fullEncrypted is %d\n", fullEncrypted); // Prints final value
+  
+
+
+  return 0;   // End
+}
 ```
