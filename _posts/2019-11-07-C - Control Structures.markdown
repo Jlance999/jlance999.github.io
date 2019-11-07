@@ -70,7 +70,7 @@ int main(void) {
 ```
 
 Example Output:
-![image](/assets/images/Finding the Largest Number.png)
+![image](/assets/images/Gas Mileage.png)
 
 
 
