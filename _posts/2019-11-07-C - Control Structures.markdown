@@ -776,3 +776,6 @@ int main(void) {
   return 0;   // End
 }
 ```
+
+Example Output:
+![image](/assets/images/Enforcing Privacy with Cryptography.png)
