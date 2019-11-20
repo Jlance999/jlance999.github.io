@@ -5,8 +5,6 @@ date:   2019-10-29 21:21:42 -0400
 categories: C
 ---
 
-# III: Structured Program Development in C
-
 The beginning of this chapter focuses a great deal on pseudocode and control structures, for practice I will be writing pseudocode to pre plan each program added to this post.
 Also mentioned are control structures, namely sequence, selection and repetition, there are only seven within the base C language. I will do my best to create concrete examples of each control structure type if they are not already included in the exercises.
 
