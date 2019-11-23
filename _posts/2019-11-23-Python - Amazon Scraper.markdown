@@ -10,12 +10,14 @@ on youtube which you can find [here](https://www.youtube.com/watch?v=Bg9r_yLk7VY
 so I sat out to make this program into something I and others may be more comfortable using. I doubt I will be able to fix all of these problems, I have 0 experience with python, but I will post an extensive list and mark 
 off those that I have fixed thusfar here.
  
-- [x] The number stored requires knowing ahead of time the number of digits it will contain
+- [x] The number stored requires knowing ahead of time the number of digits it will contain - see Price Conversion
 - [ ] The program has no GUI, not an issue for people used to working with a terminal but definitely hurts usability
 - [ ] The program only tracks one product at a time
 - [ ] The program requires a URL to work, possibly not an issue, but it would be better to have this stored in a variable instead of hard coded into the function
 - [ ] The program only tracks prices whie running (duh), maybe we can webhost this or at least make it run on computer startup (Rasberry Pi microserver time?)
 - [ ] If the price of the product does fall to where we want it to, it will send an email every time it checks again (at whatever frequency you have set)
+- [ ] There is no way to change the price to notify by except changing a conditional within the program, maybe have that set to a variable based off of the original scan.
+- [ ] There is no storage of the price changes over time, having this functionality may make it clear if an item being watched is holding its value or dropping over time
  
 ## Price Conversion
  
