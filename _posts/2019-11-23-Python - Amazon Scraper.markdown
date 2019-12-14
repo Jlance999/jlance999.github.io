@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Python: Amazon Price Scraper"
-date:   2019-10-29 21:21:42 -0400
+date:   2019-11-23 21:21:42 -0400
 categories: Python
 ---
 
@@ -10,6 +10,8 @@ on youtube which you can find [here](https://www.youtube.com/watch?v=Bg9r_yLk7VY
 so I sat out to make this program into something I and others may be more comfortable using. I doubt I will be able to fix all of these problems, I have 0 experience with python, but I will post an extensive list and mark 
 off those that I have fixed thusfar here.
  
+## Problems 
+
 - [x] The number stored requires knowing ahead of time the number of digits it will contain - see Price Conversion
 - [ ] The program has no GUI, not an issue for people used to working with a terminal but definitely hurts usability
 - [ ] The program only tracks one product at a time
@@ -25,3 +27,6 @@ This was actually a very easy fix, we simply imported a decimal supporting libra
 are storing a set number of digits, so we do not need to modify the progrom for each individual item based on the number of digits in its price moving forward.
  
 ![image](/assets/images/AmazonScraper.py Price Conversion - Visual Studio Code [Admi.png)
+
+## Saving Data to Files
+
