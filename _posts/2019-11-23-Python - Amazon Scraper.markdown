@@ -30,3 +30,8 @@ are storing a set number of digits, so we do not need to modify the progrom for 
 
 ## Saving Data to Files
 
+My current solution is saving data to a txt file. This is subject to change and still needs some work at this time. Namely, now that I have began with setting up a live graph through matplotlib I realize I need to also store the date and possibly time along with the price in order to properly graph the changes over time. I'll use the time library and simple concatonation with a comma as my delimmiter and split the data, but have not set this up yet.
+
+## Graphing Data
+
+I've imported matplit lib and am currently digging through its documentation and a few tutorials elsewhere (sentdex on YouTube) in order to try to get this running. As of now I'm displaying a graph but still need to figure out how to properly get my data to display.
