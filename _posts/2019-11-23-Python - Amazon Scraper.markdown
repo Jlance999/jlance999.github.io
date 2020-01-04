@@ -19,19 +19,21 @@ off those that I have fixed thusfar here.
 - [ ] The program only tracks prices whie running (duh), maybe we can webhost this or at least make it run on computer startup (Rasberry Pi microserver time?)
 - [ ] If the price of the product does fall to where we want it to, it will send an email every time it checks again (at whatever frequency you have set)
 - [ ] There is no way to change the price to notify by except changing a conditional within the program, maybe have that set to a variable based off of the original scan.
-- [ ] There is no storage of the price changes over time, having this functionality may make it clear if an item being watched is holding its value or dropping over time
+- [x] There is no storage of the price changes over time, having this functionality may make it clear if an item being watched is holding its value or dropping over time
  
 ## Price Conversion
  
-This was actually a very easy fix, we simply imported a decimal supporting library then stripping the dollar symbol from the stored value. The same method can be used to strip other currency symbols as well, and we no longer 
+23 Nov 19: This was actually a very easy fix, we simply imported a decimal supporting library then stripping the dollar symbol from the stored value. The same method can be used to strip other currency symbols as well, and we no longer 
 are storing a set number of digits, so we do not need to modify the progrom for each individual item based on the number of digits in its price moving forward.
  
 ![image](/assets/images/AmazonScraper.py Price Conversion - Visual Studio Code [Admi.png)
 
 ## Saving Data to Files
 
-My current solution is saving data to a txt file. This is subject to change and still needs some work at this time. Namely, now that I have began with setting up a live graph through matplotlib I realize I need to also store the date and possibly time along with the price in order to properly graph the changes over time. I'll use the time library and simple concatonation with a comma as my delimmiter and split the data, but have not set this up yet.
+03 Jan 20: My current solution is saving data to a txt file. This is subject to change and still needs some work at this time. Namely, now that I have began with setting up a live graph through matplotlib I realize I need to also store the date and possibly time along with the price in order to properly graph the changes over time. I'll use the time library and simple concatonation with a comma as my delimmiter and split the data, but have not set this up yet.
 
 ## Graphing Data
 
-I've imported matplit lib and am currently digging through its documentation and a few tutorials elsewhere (sentdex on YouTube) in order to try to get this running. As of now I'm displaying a graph but still need to figure out how to properly get my data to display.
+03 Jan 20: I've imported matplit lib and am currently digging through its documentation and a few tutorials elsewhere (sentdex on YouTube) in order to try to get this running. As of now I'm displaying a graph but still need to figure out how to properly get my data to display.
+
+04 Jan 20: Data is now showing on graph, the reason it was not working previously was due to how I was storing data to the txt file. Using a different text file with my own inputs it worked without issue. Because I was not storing the date the graph function was looking for a second variable to split and finding only the price. Once I've set up my data storage function with the ability to store the date with the price the issue should be permenantly fixed. I also had a few issues with my animate function not being a child function of the graph function, and variable hierchy not being used. By making the graph itself a variable local to the graph function and nesting the animate function which will poll the text document for changes at a set rate (1 second currently) I was able to fix this issue.
