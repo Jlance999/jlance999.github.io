@@ -42,4 +42,4 @@ are storing a set number of digits, so we do not need to modify the progrom for 
 
 04 Jan 20: Data is now showing on graph, the reason it was not working previously was due to how I was storing data to the txt file. Using a different text file with my own inputs it worked without issue. Because I was not storing the date the graph function was looking for a second variable to split and finding only the price. Once I've set up my data storage function with the ability to store the date with the price the issue should be permenantly fixed. I also had a few issues with my animate function not being a child function of the graph function, and variable hierchy not being used. By making the graph itself a variable local to the graph function and nesting the animate function which will poll the text document for changes at a set rate (1 second currently) I was able to fix this issue.
 
-[image](/assets/images/AmazonScraper.py Graph Function - Visual Studio Code.png)
+![image](/assets/images/AmazonScraper.py Graph Function - Visual Studio Code.png)
