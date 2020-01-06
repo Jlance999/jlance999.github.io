@@ -19,7 +19,7 @@ off those that I have fixed thusfar here.
 - [ ] The program only tracks prices whie running (duh), maybe we can webhost this or at least make it run on computer startup (Rasberry Pi microserver time?)
 - [ ] If the price of the product does fall to where we want it to, it will send an email every time it checks again (at whatever frequency you have set)
 - [ ] There is no way to change the price to notify by except changing a conditional within the program, maybe have that set to a variable based off of the original scan.
-- [x] There is no storage of the price changes over time, having this functionality may make it clear if an item being watched is holding its value or dropping over time
+- [x] There is no storage of the price changes over time, having this functionality may make it clear if an item being watched is holding its value or dropping over time - see Saving Data to Files
  
 ## Price Conversion
  
