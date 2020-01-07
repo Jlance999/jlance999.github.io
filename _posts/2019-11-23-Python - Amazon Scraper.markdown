@@ -87,6 +87,5 @@ entry.pack()
 
 root.mainloop()
 ```
-![image](/assets/images/AmazonScraper.py GUI Code - Visual Studio Code.png)
 
 ![image](/assets/images/AmazonScraper.py GUI Beginnings - Visual Studio Code.png)
