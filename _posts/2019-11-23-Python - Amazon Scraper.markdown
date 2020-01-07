@@ -72,7 +72,7 @@ def graph():
     
     ani=animation.FuncAnimation(fig, animate, interval=1000) 
     plt.show()
-    ```
+```
 
 ![image](/assets/images/AmazonScraper.py Graph Example - Visual Studio Code.png)
 
