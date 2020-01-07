@@ -51,6 +51,42 @@ are storing a set number of digits, so we do not need to modify the progrom for 
 06 Jan 20:
 Using tkinter I was able to begin working my way to a useable GUI, its pretty awful at this point, and is taking quite a lot of refactoring of the program as whole to get working. Previously I was using the original tutorials janky implementation to run the program with a while(True) statement. From this point I will be working to make the program less autonomous and more GUI oriented. I intend to make how often things are checked configurable as well as a few other options, as well as implement the graph function into the GUI itself if possible, or have it ran on a button press instead of running each time the program is executed.
 
+```Python
+import tkinter as tk
+
+root = tk.Tk()
+cHeight=500
+cWidth=800
+
+canvas = tk.Canvas(root, height=cHeight, width=cWidth)
+canvas.pack()
+
+frame = tk.Frame(root, bg='#1f1f1f')
+frame.place(relwidth=1, relheight=1)
+
+#Frame to hold image label
+frameInner = tk.Frame(frame, bg= "#282828")
+frameInner.place(anchor='nw', relwidth=.4, relheight=.5)
+
+#Stores command=function_name to run a function
+button = tk.Button(root, text="Confirm Change", bg='gray',)
+button.pack()
+
+labelPrice = tk.Label(frame, text= "Current Price: ", bg='#1f1f1f', fg='white')
+labelPrice.place(relx=.7, rely=0)
+
+labelNotifPrice = tk.Label(frame, text= "Notification Price: ", bg='#1f1f1f', fg='white')
+labelNotifPrice.pack()
+
+
+
+#Entry pane to change notification price.
+entry = tk.Entry(frame, bg='green')
+entry.pack()
+
+
+root.mainloop()
+```
 ![image](/assets/images/AmazonScraper.py GUI Code - Visual Studio Code.png)
 
 ![image](/assets/images/AmazonScraper.py GUI Beginnings - Visual Studio Code.png)
