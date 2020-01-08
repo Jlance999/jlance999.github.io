@@ -163,9 +163,11 @@ Correios.DoNotSend
 
 Amazon bot detection found us out! The shame. Now what? Do we just abandon our poor scraper who didn't even make it to a full useable program outside of the terminal? Do we chalk it up to a learning experience and move on? Absolutely not. The entire reason I took the time to do this project in the first place was to learn about Python, and hopefully build my first GUI driven application after all of the C projects schoolwork has haunted my nightmares with. I need a break from plugging algorithms into those unforgiving black and white screens, and I'm not ready for that break to be over. I have spent the morning mulling over this issue, and the possible ways to move forward.
 
-# Manipulate the Header
+## Manipulate the Header
 
-I could simply change my header and restore the full funcitonality of the program.
+I could simply change my header and restore the full funcitonality of the program. In the header we are passing a User-Agent, from my understanding this is basically data sent to the website whenever we request content from it. This text identifies a few things about the system sending the request, namely the application we are using, such as the version of Chrome, our operating system, and IP information. This is useful for web developers because they can then custom tailor their web page/application to different web browsers or devices, or in this case, are not, indeed a human user.
+
+There are plenty of automated ways to change the user agent when the scraper runs into issues, or simply generate a new oew one whenever the program is ran, however that hardly seems necessary and I won't be taking that path.
 
 ## Pros
 + Easy
