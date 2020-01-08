@@ -16,7 +16,7 @@ I thought, alright, fair enough, I'll just revert to my last working implementat
 
 ![image](/assets/images/2020-01-08 12_47_38-Amazon.com_ Synology DS418play NAS Disk Station, 4-bay, 2GB DDR3L (Diskless)_ Co.png)
 
-Alright, the variable is the same, maybe its just being loaded in differently and I need to add a delay to the scraper or something else trivial, as I learned from my troubleshooting background, its usually logical to check for the most obvious possible issues and work my way down. Instead of adding a delay, I first checked to see if the html itself was even being parsed, to do this I simply added ```print(soup)``` on the line just before the error occured. This is where things got interesting.
+Alright, the variable is the same, maybe its just being loaded in differently and I need to add a delay to the scraper or something else trivial, as I learned from my troubleshooting background, its usually logical to check for the most obvious possible issues and work my way down. Instead of adding a delay, I first checked to see if the html itself was even being parsed, to do this I simply added print(soup) on the line just before the error occured. This is where things got interesting.
 
 ```
 
