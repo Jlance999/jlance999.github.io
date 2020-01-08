@@ -163,21 +163,52 @@ Correios.DoNotSend
 
 Amazon bot detection found us out! The shame. Now what? Do we just abandon our poor scraper who didn't even make it to a full useable program outside of the terminal? Do we chalk it up to a learning experience and move on? Absolutely not. The entire reason I took the time to do this project in the first place was to learn about Python, and hopefully build my first GUI driven application after all of the C projects schoolwork has haunted my nightmares with. I need a break from plugging algorithms into those unforgiving black and white screens, and I'm not ready for that break to be over. I have spent the morning mulling over this issue, and the possible ways to move forward.
 
-## Manipulate the Header
+## Option 1 - Manipulate the Header
 
 I could simply change my header and restore the full funcitonality of the program. In the header we are passing a User-Agent, from my understanding this is basically data sent to the website whenever we request content from it. This text identifies a few things about the system sending the request, namely the application we are using, such as the version of Chrome, our operating system, and IP information. This is useful for web developers because they can then custom tailor their web page/application to different web browsers or devices, or in this case, are not, indeed a human user.
 
 There are plenty of automated ways to change the user agent when the scraper runs into issues, or simply generate a new oew one whenever the program is ran, however that hardly seems necessary and I won't be taking that path.
 
-## Pros
+**_Pros_**
 + Easy
 + Restores full functionality of previously written code
 + Allows me to immediately go back to learning tkinter
-
++ Useable in other web scraping applications
  
-## Cons
+**_Cons_**
 + This issue could re-arise in the future
 + Amazon's servers probably hate web scrapers 
 + Increases maintenance needs of program moving forward
 
 
+## Option 2 - Use a Different Scraping Method
+
+There are other scraping solutions, such as scrappy or utilizing Selenium. There would be minimal rewriting of the program, as only our check_price function does any actual web scraping, the rest just store and display the data it creates. There would however be some upfront reading required to familiarize myself with their uses.
+
+**_Pros_**
++ Minimal Rewriting Necessary
++ Still using a scraping library/method
++ Useable in other web scraping applications
+
+**_Cons_**
++ Could have their own sets of issues
++ Could require more time than necessary to fix the issue
+
+
+## Option 3 - Use Amazon's API
+
+Amazon does, of course, have their own API, which does have functionality to search for items, get their prices, pictures and all other data we wish for. There are however a few issues. This API is intended for advertising, and some products are not tracked. They do not wish for you to store the data from this API. The scraper loses cross-website compatibility, with other methods, a few changed variable searches would make this program useable on other sites.
+
+**_Pros_**
++ Probably less server load for Amazon
++ Get to learn how to use an API in general
++ Will no longer have to worry about getting in trouble for being a robot
+
+**_Cons_** 
++ May not have access to full range of products
++ Will not be allowed to store data past 24 hours
++ Program can no longer easily be re-purposed for other websites
+
+## Conclusion
+
+At the end of the day the purpose of this project is to learn. I think being able to call an API would of course be useful, but I can do that with another purpose built application in the future. The ability to properly use a web scraper, store and plot data, and build professionally viable GUI are far more important to me currently. For now I will be changing my user agent and continueing to iterate on the core of the program I have created thus far. This is not a product I intend to sell or to give a wide use, it just needs to be a minimum viable product allowing me to practice a new language. I will probably include it on my resume for now, and as such will ensure it continues to work, updating the user agent as I need to. Upon changing the user agent, the program was immediately restored functionality. I went down quite the rabit hole to get here, but thought the reading and eventual decisions that had to be made from such a simple problem were worth documenting. 
