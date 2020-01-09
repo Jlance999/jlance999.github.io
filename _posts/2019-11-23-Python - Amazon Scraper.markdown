@@ -76,6 +76,15 @@ def graph():
 
 ![image](/assets/images/AmazonScraper.py Graph Example - Visual Studio Code.png)
 
+08 Jan 20:
+Made minor changes to the graph function, using code examples found [here](https://towardsdatascience.com/customizing-plots-with-python-matplotlib-bcf02691931f "Customizing Plots with Python Matplotlib") I was able to add lines to the graph to make it far more readable. I'm still looking to change the graph title to that of the product it is tracking but if you've read the other [post](https://www.jeremyperkins.dev/python/2020/01/08/Python-Scraper-Problems.html) I made today, you'll understand why I'm trying to make minimal calls to Amazon's website today. I also changed the style of the graph to be more suitable to the GUI's color pallet.
+
+```
+style.use('dark_background')
+ax1.grid(color='grey', linestyle='-', linewidth=0.25, alpha=0.5)
+```
+
+![image](/assets/images/AmazonScraper.py Graph Gridlines.png)
 ## GUI
 
 06 Jan 20:
