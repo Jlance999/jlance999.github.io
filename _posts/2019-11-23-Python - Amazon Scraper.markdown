@@ -85,6 +85,7 @@ ax1.grid(color='grey', linestyle='-', linewidth=0.25, alpha=0.5)
 ```
 
 ![image](/assets/images/AmazonScraper.py Graph Gridlines.png)
+
 ## GUI
 
 06 Jan 20:
@@ -128,3 +129,30 @@ root.mainloop()
 ```
 
 ![image](/assets/images/AmazonScraper.py GUI Beginnings - Visual Studio Code.png)
+
+## Multiple Product Tracking
+
+09 Jan 20: Its 2am, I started off yesterday just wanting to tackle grabbing the product images from the website so I could implement them into the GUI, but then I realized if I wanted images, I needed a place to store them. If I intend to have the product track multiple products in the future, that would hardly be organized. I decided it was time to implement some type of automated file handling and storage. This is what I came up with.
+
+```
+def setupDir(product):
+    
+    if (os.path.isdir('./'+ product) ==False):
+        os.mkdir(mainDir + product)
+        os.mkdir(mainDir + product + '//' +'productImages')
+```
+
+I added a call to this function to the check_price function for now, which at this stage is the funnel for the entire program working, as data isn't stored from beautifulsoup elsewhere, it is simply parsed there and the price and product name are taken as variables. This will test if there is a folder with the name of the product as its name, if not it will create one, as well as a second folder within it to hold the images I intend to scrape (still did not get to that today/yesterday, unfortunately). Otherwise it does nothing. I decided it may also be important to store more information on the product, such as the product name itself, a description, and other information I may find useful outside of the graph function. I added a few new lines to the storeDataTxt function to facilitate.
+
+```
+titleDataDir=mainDir + '//' + product + '//' +"productData.txt"
+    titleData = open(titleDataDir, "a")
+    titleData.write(product)
+    titleData.close()
+```
+
+I will be utilizing the os module to check if the productData.txt file already exists, and if it does it will not be overwritten, and will instead proceed to save the date and price as it already did previously, I'm also only saving the name of the product at this time, as this was only for testing, I'll scrape anything that seems useful to here for safekeeping in the future. As you can see by the time created, everything here, including the folder containing all of this, is automatically generated between the setupDir function and saveDataTxt.
+
+![image](/assets/images/AmazonScraper.py File Handling.png)
+
+I'm actually pretty happy with my progress for the day all things considered, though I will have to find a new solution to my graphing function moving forward, as it currently has its file path hard coded, I'll ponder that in the morning before moving on to storing more data and scraping the images. Upon running the program, this is the set of files created.
