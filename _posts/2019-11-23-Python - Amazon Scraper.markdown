@@ -130,6 +130,67 @@ root.mainloop()
 
 ![image](/assets/images/AmazonScraper.py GUI Beginnings - Visual Studio Code.png)
 
+16 Jan 20: 
+Added drop down menu which gets its selectioins from a list, currently working on getting the selections to autopopulate the rest of the GUI with the product name, price, image and graph.
+
+```
+    # List to hold currently indexed products
+    productList = [
+        'Synology DS418play',
+        'Sweet Cell Phone Case',
+        'Arduino'
+    ]
+
+    # Dropdown for product selection
+    var=tk.StringVar()          # Holds current selection
+    var.set(productList[0])        # Sets Default Selection
+
+    # Configuring actual drop down position.
+    productSel= tk.OptionMenu(frame, var, *productList)     #Configuring actual drop down
+    productSel.place(anchor='s', relx=.75, rely=.25)
+```
+
+Added filtering to locate and save the image url of the landing image to a variable in the check_price function. Used requests to download said image to the premade directory.
+
+```
+    # Filtering down to the closs that holds all of the image information
+    imgs = soup2.find('div', class_='imgTagWrapper')
+    # For debugging print('imgs= ',imgs)
+
+
+    # Filtering down to the direct product image url.
+    imgsurl = imgs.find('img', class_='a-dynamic-image') ['data-a-dynamic-image']
+    imgsurl = imgsurl.split('"')
+    imgsurl = imgsurl[1]
+    print('imgsurl= ',imgsurl)
+```
+
+Hard coded the first image I've downloaded to figure out how to properly incorporate it into the GUI, had to add another inport to get image handling working but the image is now fully integrated into the gui and is auto-resizing when the program is stretched/maximized.
+
+```
+ # Frame to hold image label
+    frameInner = tk.Frame(frame, bg= "#282828")
+    frameInner.place(anchor='nw', relwidth=.4, relheight=.5)
+
+    def resize_image(event):
+        new_width = event.width
+        new_height = event.height
+        image = copy_of_image.resize((new_width, new_height))
+        photo = ImageTk.PhotoImage(image)
+        labelImage.config(image = photo)
+        labelImage.image = photo #avoid garbage collection
+
+    image = Image.open("C:\\Users\\Jeremy\\Documents\\GitHub\\Amazon Scraper\\image.png")
+    copy_of_image = image.copy()
+    photo = ImageTk.PhotoImage(image)
+    labelImage = tk.Label(frameInner, image=photo)
+    labelImage.bind('<Configure>', resize_image)
+    labelImage.pack()
+```
+
+This is the GUI currently. Obviously lots of work to do still but I'm so happy I got the image handling taken care of finally.
+![image](/assets/images/AmazonScraper.py Image on GUI.png)
+
 ## Multiple Product Tracking
 
 09 Jan 20: Its 2am, I started off yesterday just wanting to tackle grabbing the product images from the website so I could implement them into the GUI, but then I realized if I wanted images, I needed a place to store them. If I intend to have the product track multiple products in the future, that would hardly be organized. I decided it was time to implement some type of automated file handling and storage. This is what I came up with.
